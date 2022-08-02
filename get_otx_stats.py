@@ -32,13 +32,13 @@ class OTXReceiver():
         year = date_time.split('-')[0]
         quarter = '1'
         m = date_time.split('-')[1]
-        if m=='04' or m=='05' or m=='06':
+        if m in ['04', '05', '06']:
             quarter = '2'
-        if m=='07' or m=='08' or m=='09':
+        if m in ['07', '08', '09']:
             quarter = '3'
-        if m=='10' or m=='11' or m=='12':
+        if m in ['10', '11', '12']:
             quarter = '4'
-        return year + '-Q' + quarter
+        return f'{year}-Q{quarter}'
         
 
     def write_iocs(self):
